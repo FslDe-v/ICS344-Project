@@ -1,1 +1,2 @@
-# ICS344-Project
+## Group Number
+Group 11
