@@ -78,7 +78,6 @@ We created a dashboard named **HTTP Attack Dashboard** with the following panels
 
 ## 5. Deliverables for Phase 2
 
-* **Ingested Log Files**:  `phase1_banner.txt`, `phase1_nmap.txt`, `phase1_nikto.txt`
 * **Splunk Searches & Screenshots**: `log1.png`, `log2.png`, `log3.png`
 * **Dashboard Screenshot**: `dashboard.png`
 
