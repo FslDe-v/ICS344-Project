@@ -81,4 +81,4 @@ We created a dashboard named **HTTP Attack Dashboard** with the following panels
 * **Splunk Searches & Screenshots**: `log1.png`, `log2.png`, `log3.png`
 * **Dashboard Screenshot**: `dashboard.png`
 
-Proceed to Phase 3 for proposing and implementing defensive measures based on these visualizations.
+
