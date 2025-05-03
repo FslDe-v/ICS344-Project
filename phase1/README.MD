@@ -128,4 +128,3 @@ This confirmed root-level file access and located `secret.txt` on the filesystem
 * **Raw Scan Outputs**: `phase1_nmap.txt`, `phase1_nikto.txt`
 * **Custom Banner Script**: `phase1_http_banner.py`
 
-Proceed to Phase 2 for SIEM ingestion and analysis of these logs.
