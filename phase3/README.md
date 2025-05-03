@@ -103,5 +103,13 @@ Screenshot:
 * Firewall blocks unwanted FTP commands.
 * Post‐defense retesting confirms the service is no longer compromiseable via `mod_copy` exploit.
 
-*End of Phase 3 README.*
 
+### Before vs. After Summary
+
+| Item                                | Before                        | After                                             |
+| ----------------------------------- | ----------------------------- | ------------------------------------------------- |
+| Passive FTP (Port 21) directory     | `/var/www/html` writable      | Directory write permissions removed               |
+| PHP payload execution via mod\_copy | Payload executed successfully | Payload execution failed (directory not writable) |
+| Fail2Ban ProFTPD jail               | Not configured                | `proftpd.conf` jail enabled and active            |
+| Firewall rules                      | No FTP-specific drops         | Dropped FTP SITE CPFR/CPTO commands               |
+| TLS support                         | Disabled (cleartext FTP)      | TLS enabled (`mod_tls`) with valid certificates   |
